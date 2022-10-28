@@ -1,13 +1,18 @@
 stages:
   - test
 
-test_success:
-  stage: test
-  script:
-    - "sleep 2"
-
 test_failure:
   stage: test
   script:
     - "sleep 60"
     - "false"
+
+trigger_downstream:
+  trigger:
+    stages:
+      - test
+
+    test_success:
+      stage: test
+      script:
+        - "sleep 1"
