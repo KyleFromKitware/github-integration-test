@@ -1,0 +1,7 @@
+stages:
+  - test
+
+test_success:
+  stage: test
+  script:
+    - "sleep 1"

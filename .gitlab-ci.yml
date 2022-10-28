@@ -9,10 +9,5 @@ test_failure:
 
 trigger_downstream:
   trigger:
-    stages:
-      - test
-
-    test_success:
-      stage: test
-      script:
-        - "sleep 1"
+    include:
+      - downstream.yml
