@@ -5,11 +5,9 @@ test_success:
   stage: test
   script:
     - "sleep 2"
-  image: ubuntu:22.04
 
 test_failure:
   stage: test
   script:
     - "sleep 60"
     - "false"
-  image: ubuntu:22.04
