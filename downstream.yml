@@ -4,4 +4,4 @@ stages:
 test_success:
   stage: test
   script:
-    - "sleep 2"
+    - "sleep 1"
